@@ -34,13 +34,12 @@ function mainMenu(person, people){
     return app(people); // restart
   }
 
-<<<<<<< HEAD
-  let displayOption = prompt("Found " + person.firstName + " " + person.lastName + ". Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
+ let displayOption = prompt("Found " + person.firstName + " " + person.lastName + ". Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
 
-=======
+
   let displayOption = prompt("Found " + person[0].firstName + " " + person[0].lastName + ". Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
   let searchInfoResults;
->>>>>>> f429dab1f784c37402dd969d37fdeb9a9e394b45
+
   switch(displayOption){
     case "info":
     searchInfoResults = displayPerson(person);
@@ -246,7 +245,6 @@ function searchByTrait(people){
       searchByTrait(filterResult);
     }
 
-<<<<<<< HEAD
 }
 
 // function displayFamily(data, personPass){
@@ -276,8 +274,4 @@ function searchByTrait(people){
 
 
 //function displayDesc (descInfo, data){}
-=======
-  alert(famInfoAlert);
-}
 
->>>>>>> f429dab1f784c37402dd969d37fdeb9a9e394b45
