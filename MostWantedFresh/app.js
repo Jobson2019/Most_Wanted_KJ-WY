@@ -160,7 +160,7 @@ function displaySpouse(data, personFound){
 // function search by trait, needs to be fixed, only yielding array length
 function searchByTrait(people){
   let filterResult;
-  console.log("It has found " + people.length + ", please continue searching to narrow down to one person.");
+  
   let traitChoice = promptFor("Which Trait Would You Like to Search By? ex. 'Gender', 'DOB'," + " " +
   "'Height', 'Weight', 'Eye Color', 'Occupation'", chars);
   switch (traitChoice){
@@ -234,18 +234,27 @@ function searchByTrait(people){
       })
       break;
 
-
+     
+    
   }
+  alert ("It has found " + filterResult.length + ", please continue searching to narrow down to one person.")
     if (filterResult.length === 1)
     {
     return filterResult;
     }
     else {
-      return 
-      searchByTrait(filterResult);
-    }
+      console.log("It has found " + filterResult.length + ", please continue searching to narrow down to one person.");
 
+      return searchByTrait(filterResult); 
+    }
+    
+    
 }
+
+
+
+
+
 
 // function displayFamily(data, personPass){
 //   // let famInfoAlert = 
