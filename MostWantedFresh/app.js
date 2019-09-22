@@ -81,7 +81,7 @@ function searchByName(people){
 
 // alerts a list of people
 function displayPeople(people){
-  alert(people.map(function(person){
+  alert("We have found the following people matching your criteria: \n" + people.map(function(person){
     return person.firstName + " " + person.lastName;
   }).join("\n"));
 }
@@ -158,9 +158,8 @@ function displaySpouse(data, personFound){
 }
  
 // function search by trait, needs to be fixed, only yielding array length
-function searchByTrait(people){
+function searchByTrait(people, infoList){
   let filterResult;
-  
   let traitChoice = promptFor("Which Trait Would You Like to Search By? ex. 'Gender', 'DOB'," + " " +
   "'Height', 'Weight', 'Eye Color', 'Occupation'", chars);
   switch (traitChoice){
@@ -237,7 +236,8 @@ function searchByTrait(people){
      
     
   }
-  alert ("It has found " + filterResult.length + ", please continue searching to narrow down to one person.")
+  displayPeople(filterResult)
+  
     if (filterResult.length === 1)
     {
     return filterResult;
