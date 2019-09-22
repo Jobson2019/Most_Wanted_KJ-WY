@@ -190,7 +190,7 @@ function searchByTrait(people, infoList){
     case "Height":
       let heightChoice = promptFor ("What is the Person's Height?", chars);
        filterResult = people.filter(function(person){
-        if (person.height === heightChoice){
+        if (person.height == heightChoice){
           return true;
         }
         else { 
@@ -201,7 +201,7 @@ function searchByTrait(people, infoList){
     case "Weight":
       let weightChoice = promptFor ("What is the Person's Weight", chars);
        filterResult = people.filter(function(person){
-        if (person.weight === weightChoice){
+        if (person.weight == weightChoice){
           return true;
         }
       else {
@@ -224,7 +224,7 @@ function searchByTrait(people, infoList){
     case "Occupation":
       let occChoice = promptFor ("What is Their Occuptation?", chars);
        filterResult = people.filter(function(person){
-        if (person.weight === occChoice) {
+        if (person.occupation === occChoice) {
           return true;
         }
         else {
