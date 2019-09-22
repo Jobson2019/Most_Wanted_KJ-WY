@@ -37,14 +37,14 @@ function mainMenu(person, people){
  let displayOption = prompt("Found " + person.firstName + " " + person.lastName + ". Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
 
 
-   displayOption = prompt("Found " + person.firstName + " " + person.lastName + ". Do you want to know their 'info', 'family', or 'descendants'? Type the option you want or 'restart' or 'quit'");
+   
   let searchInfoResults;
 
   switch(displayOption){
     case "info":
-    searchInfoResults = displayPerson(person);
+    searchInfoResults = displayInfo(person);
     // TODO: get person's info
-    displayInfo(person);
+    
     break;
     case "family":
     // TODO: get person's family
